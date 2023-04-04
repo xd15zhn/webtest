@@ -21,5 +21,4 @@ There should be whitespace between paragraphs. We recommend including a README, 
 [simucpp系列教程(6)函数文档](./simucpp_blog/simucpp6documentation.html)  
 
 # 文件测试
-博客模板: [architect-0.2.0.zip](./files/architect-0.2.0.zip)  
 硕士毕业论文: [main.pdf](https://gitee.com/xd15zhn/masterthesis/releases/download/V1.3.2/main.pdf)  
