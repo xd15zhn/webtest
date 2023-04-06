@@ -29,10 +29,10 @@
 &emsp;&emsp;与其他人交流过以后发现还有其他的一些方法。首先matlab中有ode23和ode45函数，但我试过结果不对，不知道我用法有没有问题(这就是闭源的弊端)，而且也不知道为什么没有ode4函数(截止R2020a版本)。或者有人说直接手撕ode4，区区4组函数也不算太复杂。  
 &emsp;&emsp;也有人问是否有代码生成的功能，据说现在工业领域比如汽车行业已经广泛使用基于模型的设计(Model Based Design, MBD)，用simulink搭建模型然后直接将代码下载到处理器上。我之前用单片机写过航模飞控，一开始也是想用simulink代码生成的，但我后面发现控制部分的代码很重要但代码量并不多，占大头的还是串口通信、任务调度、传感器信号处理等simulink生成不了的代码，所以我写这个的初衷只是为了仿真，尤其是跟计算机有关的连续离散混合仿真。我也不知道MBD是如何解决我前面遇到的那些问题的，欢迎指教。  
 &emsp;&emsp;仿真中还有一个与代码生成相关的问题是，代码中各个模块的更新大量使用了虚函数，严重限制了仿真速度。所以我目前对代码生成的需求是能够去掉虚函数，直接生成ode4的4组函数，加快仿真速度。  
-&emsp;&emsp;最后，<font color=red>**如果有什么问题欢迎讨论**</font>。
+&emsp;&emsp;最后，**如果有什么问题欢迎讨论**。
 
 # 简单的例子
-![在这里插入图片描述](https://img-blog.csdnimg.cn/47f3423aa5af4cd59a223527783e1bed.png#pic_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/47f3423aa5af4cd59a223527783e1bed.png)
 ```cpp
 /*一阶系统阶跃响应*/
 #include <iostream>
@@ -77,11 +77,11 @@ int main()
     return 0;
 }
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/44474cc166a74ddc87ce704c06a412bb.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5om-5LiN5Yiw5pyN5Yqh5ZmoMTcwMw==,size_18,color_FFFFFF,t_70,g_se,x_16#pic_center =50%x50%)  
+![在这里插入图片描述](https://img-blog.csdnimg.cn/44474cc166a74ddc87ce704c06a412bb.png)  
 这一示例的详细介绍见 [simucpp系列教程(4)使用教程与程序说明](https://blog.csdn.net/qq_34288751/article/details/122285634)。
 # 另一个简单的例子
 仿真$x'=-x^3-x$，$x(0)=0.2$。  
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d0b18ee53bed4328b89e29de5362255f.png#pic_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/d0b18ee53bed4328b89e29de5362255f.png)
 ```cpp
 #include "simucpp.hpp"
 using namespace simucpp;
@@ -102,7 +102,7 @@ int main()
     return 0;
 }
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8ca54fca9648440cbfc7546f7da89e04.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5om-5LiN5Yiw5pyN5Yqh5ZmoMTcwMw==,size_18,color_FFFFFF,t_70,g_se,x_16#pic_center =50%x50%)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/8ca54fca9648440cbfc7546f7da89e04.png)
 
 # 关于框图显示的说明
 &emsp;&emsp;类似于simulink的框图显示是一开始就有的功能，但后来因为种种原因废弃了，包括但不限于：

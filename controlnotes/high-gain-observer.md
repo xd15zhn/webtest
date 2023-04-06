@@ -1,11 +1,9 @@
 被控对象
-
 $$\begin{aligned}
 \dot{x}_1 =& x_2 \\
 \dot{x}_2 =& \phi(x,u) \\
 y =& x_1
 \end{aligned}$$
-
 设 $u=\gamma(x)$ 能使系统稳定，设计观测器
 
 $$\begin{aligned}
