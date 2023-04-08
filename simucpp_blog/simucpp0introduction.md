@@ -32,7 +32,9 @@
 &emsp;&emsp;最后，**如果有什么问题欢迎讨论**。
 
 # 简单的例子
-![在这里插入图片描述](https://img-blog.csdnimg.cn/47f3423aa5af4cd59a223527783e1bed.png)
+
+![](https://img-blog.csdnimg.cn/47f3423aa5af4cd59a223527783e1bed.png)
+
 ```cpp
 /*一阶系统阶跃响应*/
 #include <iostream>
@@ -77,7 +79,9 @@ int main()
     return 0;
 }
 ```
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/44474cc166a74ddc87ce704c06a412bb.png)  
+
 这一示例的详细介绍见 [simucpp系列教程(4)使用教程与程序说明](https://blog.csdn.net/qq_34288751/article/details/122285634)。
 # 另一个简单的例子
 仿真$x'=-x^3-x$，$x(0)=0.2$。  

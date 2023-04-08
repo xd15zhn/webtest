@@ -14,6 +14,7 @@ layout: default
 # 控制
 [非线性系统的高增益观测器](./controlnotes/high-gain-observer.html)  
 [降维状态观测器的直观理解与仿真](./controlnotes/reduced-order-state-observer.html)  
+[基于特征模型的全系数自适应控制](./controlnotes/character-model.html)  
 
 # 硕士毕设
 硕士毕业论文: [机械臂在人机交互仪器自动化测试中的应用技术研究](https://gitee.com/xd15zhn/masterthesis/releases/download/V1.3.2/main.pdf)  
