@@ -12,17 +12,17 @@ $$ y(k)=\alpha_1y(k-1)+\cdots+\alpha_ny(k-n)
 对应的系统拉氏变换和z变换分别为
 
 $$\begin{aligned}
-G(s) =& \frac{b_{m-1}s^{m-1}+\cdots+b_1s+b_0}{1-a_{n-1}s^{n-1}-\cdots-a_1s-a_0} \\
-G(z) =& \frac{\beta_{m-1}z^{m-1}+\cdots+\beta_1z+\beta_0}
+G(s) =& \frac{b_{n-1}s^{n-1}+\cdots+b_1s+b_0}{1-a_{n-1}s^{n-1}-\cdots-a_1s-a_0} \\
+G(z) =& \frac{\beta_{n-1}z^{n-1}+\cdots+\beta_1z+\beta_0}
 {1-\alpha_{n-1}z^{n-1}-\cdots-\alpha_1z-\alpha_0} \\
 \end{aligned}$$
 
-式(2)中的 $\alpha$ 和 $\beta$ 参数在下面两种情况下等于或近似等于1。
+式(2)中的 $\alpha$ 和 $\beta$ 参数在下面两种情况下等于或近似等于1。  
 (1) 系统静态增益 $D=-b_0/a_0$，则差分方程系数之间满足
 
 $$ \sum_{i=1}^na_i-\frac{b_0}{a_0}\sum_{j=0}^{n-1}\beta_j=1 $$
 
-且在 $-b_0/a_0=1$ 时，所有系数之和为1。
+且在 $-b_0/a_0=1$ 时，所有系数之和为1。  
 &emsp;&emsp;拉氏变换和z变换的终值定理分别为，当终值存在时，
 
 $$\begin{aligned}
@@ -41,7 +41,7 @@ f_s(\infty) =& -\frac{b_0}{a_0} \\
 f_z(\infty) =& \frac{\sum\beta_j}{1-\sum\alpha_i} \\
 \end{aligned}$$
 
-当终值 $f_s(\infty)=f_z(\infty)=1$ 时，$\sum\alpha_i+\sum\beta_j=1$。
+当终值 $f_s(\infty)=f_z(\infty)=1$ 时，$\sum\alpha_i+\sum\beta_j=1$。  
 (2) 采样周期 $\Delta t\rightarrow 0$，且 $a_0,b_0$ 为有限值，则所有参数的和
 
 $$
@@ -50,7 +50,7 @@ $$
 \left(\frac{\Delta t}{T'}\right)^n\right]=1
 $$
 
-其中 $T'$ 为等效时间常数，且 $-a_0=(\frac{1}{T'})^n$。
+其中 $T'$ 为等效时间常数，且 $-a_0=(\frac{1}{T'})^n$。  
 &emsp;&emsp;证明：当 $\Delta t\rightarrow 0$ 时，
 
 $$\begin{aligned}
@@ -69,6 +69,7 @@ $$\begin{aligned}
 & \frac{y(k)-2y(k-1)+y(k-2)}{(\Delta t)^2} = a_1\frac{y(k-1)-y(k-2)}{\Delta t}
 +a_0y(k-2)+b_1\frac{u(k-1)-u(k-2)}{\Delta t}+b_0u(k-2) \\
 \end{aligned}$$
+
 $$\begin{aligned}
 y(k) =& 2y(k-1)-y(k-2)+a_1[y(k-1)-y(k-2)]\Delta t
 +b_1[u(k-1)-u(k-2)]\Delta t+[a_0y(k-2)+b_0u(k-2)](\Delta t)^2 \\
@@ -76,6 +77,7 @@ y(k) =& 2y(k-1)-y(k-2)+a_1[y(k-1)-y(k-2)]\Delta t
 +b_1\Delta tu(k-1) +(b_0\Delta^2t-b_1\Delta t)u(k-2) \\
 =& \alpha_1y(k-1)+\alpha_2y(k-2)+\beta_1u(k-1)+\beta_2u(k-2)
 \end{aligned}$$
+
 $$\begin{aligned}
 \sum\alpha_i+\sum\beta_j
 =& (a_1\Delta t+2)+(a_0\Delta^2t-a_1\Delta t-1)+b_1\Delta t
@@ -84,8 +86,8 @@ $$\begin{aligned}
 \lim_{\Delta t\rightarrow 0}\sum\alpha_i+\sum\beta_j =& 1
 \end{aligned}$$
 
-
 可见不包含 $\Delta t$ 的一阶项。再推广到n阶，省略包含 $\Delta t$ 的高阶项
+
 $$\begin{aligned}
 y(k) =& \sum_{i=1}^n(-1)^iC_n^iy(k-i)
 +a_{n-1}\Delta t\left(\sum_{i=0}^{n-1}(-1)^iC_n^iy(k-i)\right)
@@ -94,13 +96,23 @@ y(k) =& \sum_{i=1}^n(-1)^iC_n^iy(k-i)
 +b_{n-2}\Delta^2t\left(\sum_{i=0}^{n-2}(-1)^iC_n^iu(k-i)\right) \\
 \end{aligned}$$
 
-进一步观察得到杨辉三角各行元素的和为0，而第一个元素为1，所以等号右边第一项的系数和 $\displaystyle\sum_{i=1}^n(-1)^iC_n=1$，剩下的每一项中的系数都是完整的杨辉三角中的一行，系数和都是0，只剩下杨辉三角第一行的 $a_0y(k-n)\Delta^nt$ 和  $b_0u(k-n)\Delta^nt$，都是 $\Delta t$ 的高阶小量，可以忽略。
-&emsp;&emsp;这种推导方法用的是欧拉离散化方法，文末的第一个参考文献证明了用其他方法离散化的系数和也是1。
-&emsp;&emsp;根据微分方程系数 $a_i$ 与极点 $p_i$、时间常数 $T_i$ 的关系可以知道，当 $a_0 \neq 0$ 时
+进一步观察得到杨辉三角各行元素的和为0，而第一个元素为1，
+所以等号右边第一项的系数和 $\displaystyle\sum_{i=1}^n(-1)^iC_n=1$，
+剩下的每一项中的系数都是完整的杨辉三角中的一行，系数和都是0，
+只剩下杨辉三角第一行的 $a_0y(k-n)\Delta^nt$ 和  $b_0u(k-n)\Delta^nt$，
+都是 $\Delta t$ 的高阶小量，可以忽略。  
+&emsp;&emsp;这种推导方法用的是欧拉离散化方法，文末的第一个参考文献证明了用其他方法离散化的系数和也是1。  
+&emsp;&emsp;根据微分方程系数 $a_i$ 与极点 $p_i$、时间常数 $T_i$ 的关系可以知道，当 $a_0 \neq 0$ 时  
+
 $$ -a_0 = \prod_{i=1}^n p_i=\prod_{i=1}^n \frac{1}{T_i}>0 $$
+
 可以定义
+
 $$ T'=\sqrt{\prod_{i=1}^n T_i} $$
-为等效时间常数。于是有 $a_0=-\displaystyle\left(\frac{1}{T'}\right)^n$，又因 $(-b_0/a_0)=D$ 为等效静态增益，所以如果不忽略 $\Delta t$ 的两个高阶小量，则
+
+为等效时间常数。于是有 $a_0=-\displaystyle\left(\frac{1}{T'}\right)^n$，
+又因 $(-b_0/a_0)=D$ 为等效静态增益，所以如果不忽略 $\Delta t$ 的两个高阶小量，则
+
 $$\begin{aligned}
 \sum_{i=1}^n \alpha_i+\sum_{j=0}^{n-1} \beta_j
 =& 1+a_0\Delta^nt+b_0\Delta^nt \\
@@ -110,10 +122,15 @@ $$\begin{aligned}
 
 # 递推最小二乘法
 对多组数据$\vec{x}$和$y$，满足
+
 \[y_i = \vec{x}^\mathrm{T}_i\vec{\theta}\]
+
 其中$\vec{x}$是输入数据向量，$y$是输出数据标量。写成矩阵形式
+
 \[\vec{y} = X\vec{\theta}\]
+
 其中(以3组数据为例)
+
 $$
     X = \begin{bmatrix}
         \vec{x}^\mathrm{T}_1 \\
@@ -121,20 +138,25 @@ $$
         \vec{x}^\mathrm{T}_3
     \end{bmatrix}
 $$
+
 有$k$组数据时记作
+
 $$
     X^\mathrm{T}_k = \begin{bmatrix}
         \vec{x}_1 & \vec{x}_2 & \vec{x}_3 &
         \cdots & \vec{x}_k
     \end{bmatrix}
 $$
+
 已知最小二乘法的解为
+
 $$
     \vec{\theta}
     =(X^\mathrm{T}X)^{-1}
     X^\mathrm{T}\vec{y}\qquad(2.1)
 $$
-令$P = (X^\mathrm{T}X)^{-1}$，
+
+令 $P = (X^\mathrm{T}X)^{-1}$，
 则加上递推后
 $$\begin{aligned}
     P_k^{-1} =& X_k^\mathrm{T}X_k
