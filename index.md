@@ -12,9 +12,17 @@ layout: default
 [simucpp系列教程(6)函数文档](./simucpp_blog/simucpp6documentation.html)  
 
 # 控制
+## 非线性系统
 [非线性系统的高增益观测器](./controlnotes/high-gain-observer.html)  
-[降维状态观测器的直观理解与仿真](./controlnotes/reduced-order-state-observer.html)  
+## 特征模型
+[带遗忘因子的递推最小二乘法推导](./controlnotes/regret-least-square.html)  
 [基于特征模型的全系数自适应控制](./controlnotes/character-model.html)  
+## 最优控制与强化学习
+## 其它
+[降维状态观测器的直观理解与仿真](./controlnotes/reduced-order-state-observer.html)  
+
+# 论文相关
+[自用的编程规范](./paper/codestyle.html)  
 
 # 硕士毕设
 硕士毕业论文: [机械臂在人机交互仪器自动化测试中的应用技术研究](https://gitee.com/xd15zhn/masterthesis/releases/download/V1.3.2/main.pdf)  
