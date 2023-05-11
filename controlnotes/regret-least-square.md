@@ -66,8 +66,8 @@ $$\begin{aligned}
     = \sum_{i=1}^k\vec{x}_i\vec{x}^\mathrm{T}_i\\
     =& \sum_{i=1}^{k-1}\vec{x}_i\vec{x}^\mathrm{T}_i
     +\vec{x}_k\vec{x}^\mathrm{T}_k \\
-    =& P_{k-1}^{-1} + \vec{x}_k\vec{x}_k^\mathrm{T} \tag{2}
-\end{aligned}$$
+    =& P_{k-1}^{-1} + \vec{x}_k\vec{x}_k^\mathrm{T}
+\end{aligned} \tag{2}$$
 
 同理可得
 
