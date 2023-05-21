@@ -3,6 +3,7 @@ layout: default
 ---
 
 # Simucpp 系列教程
+首发于CSDN，移过来后很多格式不兼容，看原版点 [这里](https://blog.csdn.net/qq_34288751/category_11453352.html)  
 [simucpp：C++搭建微分方程求解器框架(重写simulink)](./simucpp_blog/simucpp0introduction.html)  
 [simucpp系列教程(1)安装](./simucpp_blog/simucpp1install.html)  
 [simucpp系列教程(2)例程解析(第一部分)](./simucpp_blog/simucpp2example-part1.html)  
