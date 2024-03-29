@@ -24,6 +24,7 @@ layout: default
 
 # 论文相关
 [自用的编程规范](./paper/codestyle.html)  
+[集合优化问题与贪心算法的性能](./paper/jYajing20.html)  
 
 # 硕士毕设
 硕士毕业论文: [机械臂在人机交互仪器自动化测试中的应用技术研究](https://gitee.com/xd15zhn/masterthesis/releases/download/V1.3.2/main.pdf)  
